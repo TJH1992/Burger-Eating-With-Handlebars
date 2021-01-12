@@ -4,15 +4,15 @@ body {
 	text-align: center;
 }
 
-/* img {
-	width: 900px;
+img {
+	width: auto;
 	height: auto;
-} */
+}
 
-li {
+ul {
 	padding: 5px;
 	margin: 5px;
-	background: #faebd7;
+	background: #f7debe;
   }
   
   .label {
