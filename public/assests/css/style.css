@@ -1,10 +1,30 @@
 body {
 	background-color: rgb(246, 138, 37);
 	margin-top: 15px;
+	text-align: center;
 }
 
-img {
+/* img {
 	width: 900px;
 	height: auto;
-}
+} */
 
+li {
+	padding: 5px;
+	margin: 5px;
+	background: #faebd7;
+  }
+  
+  .label {
+	font-weight: bold;
+  }
+  
+  .create-update-form {
+	padding: 5px;
+	margin: 5px;
+	background: aqua;
+  }
+  
+  .form-group {
+	margin-bottom: 5px;
+  }

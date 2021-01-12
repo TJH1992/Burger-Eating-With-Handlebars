@@ -1,55 +1,32 @@
-<div class="container">
+<h1>Eat Da Burger!</h1>
 
+<h2>Burger Choices!</h2>
 
-	<div class="row justify-content-center">
-		<div class="col-md-12">
-			<h1 class="text-center">Devour The Burger!</h1>
-		</div>
-	</div>
+<ul>
+  {{#each burgers}}
+    {{#unless devoured}}
+      {{> burgers/burger-block devoured=false}}
+    {{/unless}}
+  {{/each}}
+</ul>
 
-	<div class="row">
-		<div class="col-md-12 text-center">
-			<form class="create-update-form" action="burgers/insertOne" method="POST">
-				<div>
-					<textarea class="text-center" type="text" placeholder="Tell Us What Your Dream Burger Is"
-						name="name"></textarea><br>
-					<button class="btn btn-primary button" type="submit">Add Your Dream Burger</button>
-					<h5 class="text-center">Your Dream Burger Is Only A Few Key Strokes Away!</h5>
-				</div>
-			</form>
-		</div>
-	</div>
-	<br>
+<h2>Devoured Burgers!</h2>
 
-	<div class="row burger-container justify-content-center text-center">
-			<div class="col-md-12">
-				<h2>Burger Choices</h2>
-				<ul>
-					{{#each burgers}}
-					{{#unless this.devoured}}
-					<ul>
-						<h4>{{this.id}}.{{this.burger_name}}
-							<button type='submit' id={{this.id}} class="eat-burger-btn btn btn-primary button"
-								data-id="{{this.id}}">Devour!</button>
-						</h4>
-					</ul>
-					{{/unless}}
-					{{/each}}
-				</ul>
-			</div>
-		
+<ul>
+  {{#each burgers}}
+    {{#if devoured}}
+      {{> burgers/burger-block devoured=true}}
+    {{/if}}
+  {{/each}}
+</ul>
 
-		<div class="col-md-12">
-			<h3>Devoured Burgers</h3>
-			<ul>
-				{{#each burgers}}
-				{{#if this.devoured}}
-				<li>
-					<h4>{{this.id}}. {{this.burger_name}}</h4>
-				</li>
-				{{/if}}
-				{{/each}}
-			</ul>
-		</div>
-	</div>
-</div>
+<h2>Add a Burger</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="burgername">Burger Name:</label>
+    <input type="text" id="burgername" name="name">
+  </div>
+
+  <button type="submit">Add Burger</button>
+</form>
