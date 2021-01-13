@@ -4,7 +4,7 @@
 
 ![screenshot](https://user-images.githubusercontent.com/70725231/104274760-6e564400-5456-11eb-8926-32da347a5561.png)
 
-  ![alt text](https://youtu.be/4cP5YqmGnf4)
+  https://youtu.be/4cP5YqmGnf4
 
   ## Table of Contents
   - [Description](#projectDescription)
